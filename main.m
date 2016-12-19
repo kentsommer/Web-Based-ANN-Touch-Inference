@@ -6,7 +6,7 @@ format long g;
 inputs = getFeatureVectors( OX, OY, OZ, MX, MY, MZ, rAlpha, rBeta, rGama, MGX, MGY, MGZ, KEYS);
 targets = getTargetVectors(KEYS);
 
-TRAIN
+%TRAIN
 net = patternnet([1000], 'traingd');
 net.trainParam.max_fail = 10;
 net.performFcn = 'crossentropy';
